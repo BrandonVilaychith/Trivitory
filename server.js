@@ -15,6 +15,9 @@ app.use(express.json());
 // Routes
 app.get("/", (req, res) => res.send("Express API Running"));
 
+app.use("/api/users", require("./routes/users"));
+app.use("/api/brands", require("./routes/brands"));
+
 // Finds port to use
 const PORT = process.env.PORT || 7000;
 
